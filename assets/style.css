@@ -1,0 +1,29 @@
+body {
+  font-family: "Open sans";
+}
+header {
+  text-align: center;
+  margin: auto;
+}
+.logo {
+  width: 150pt;
+  margin-bottom: 1rem;
+}
+article {
+  counter-reset: css-counter 0;
+}
+.step {
+  position: relative;
+  counter-increment: css-counter 1;
+}
+.step::before {
+  content: counter(css-counter);
+  font-size: 4rem;
+  font-weight: 400;
+  opacity: 20%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+}
