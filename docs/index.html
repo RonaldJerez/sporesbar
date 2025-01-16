@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.indigo.min.css">
-    <title>Coming Soon!</title>
+    <title>Spores Bar: Instructions List</title>
     <link rel="stylesheet" href="/assets/fullscreen.css">
   </head>
   <body>
     <main class="container-fluid">
-      <img class="logo" src="./assets/color-logo.svg"  />
-      <h1 class="heading grow">Coming Soon!</h1>
-      <a class="instagram" href="https://www.instagram.com/spores.bar/">
-        <img src="./assets/instagram.png" />
-      </a>
+      <img class="logo grow" src="/assets/color-logo.svg"  />
+      <h1 class="heading">Instructions List</h1>
+      {% for doc in site.instructions %}
+      <a href="{{ doc.url }}"">{{ doc.heading }}</a>
+      {% endfor %}
     </main>
   </body>
 </html>

@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 5rem !important;
+}
+
+.logo {
+  width: 250px;
+  height: 250px;
+  margin: 3em;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.heading {
+  font-size: 2em;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.instagram {
+  margin-bottom: 3em;
+}
+
+.instagram img {
+  width: 325px;
+  height: 125px;
+  scale: 60%;
+}

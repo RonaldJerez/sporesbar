@@ -1,5 +1,5 @@
 body {
-  font-family: "Open sans";
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 header {
   text-align: center;
@@ -12,18 +12,24 @@ header {
 article {
   counter-reset: css-counter 0;
 }
+article p {
+  position: relative;
+}
 .step {
+  z-index: 0;
   position: relative;
   counter-increment: css-counter 1;
 }
 .step::before {
+  color: #800020;
   content: counter(css-counter);
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 400;
-  opacity: 20%;
+  opacity: 50%;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+  z-index: -1;
   transform: rotate(25deg);
   -webkit-transform: rotate(25deg);
 }

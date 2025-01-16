@@ -1,0 +1,24 @@
+---
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Redirect Screen</title>
+    <script>
+      const docs = {
+      {% for doc in site.instructions %}
+        '{{ doc.qr-code | downcase }}': '{{ doc.url }}', 
+      {% endfor %}
+      }
+
+      const params = new URLSearchParams(location.search)
+      const code = params.keys().next().value
+      const destination = code ? docs[code.toLowerCase()] : '/docs/'
+
+      window.location.replace(destination)
+    </script>
+  </head>
+  <body>
+    Redirecting you to the documentation requested.
+  </body>
+</html>
